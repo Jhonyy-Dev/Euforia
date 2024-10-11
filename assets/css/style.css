@@ -466,11 +466,86 @@ button.navbar-toggler:focus:not(:focus-visible) {
 .home {
     background: url(../img/home-bg.jpg);  
     width: 100%;
-	position: relative;
+    position: relative;
     background-repeat: no-repeat;
     height: 800px;
+    background-position: center; /* Centra la imagen */
     background-size: cover; 
 }
+
+/* Ajuste adicional para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 844px) {
+    .home {
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        max-height: 100vh; /* Usa el 100% de la altura visible de la pantalla */
+        background-position: center; /* Centra la imagen */
+        background-size: contain;
+        margin-bottom: -35%;
+    }
+    h1#subtitulo {
+        font-size: 24px !important;
+        color: #ffffff;
+        margin-top: 20%;
+        letter-spacing: 2px;
+    }
+    .tp-btn {
+        display: inline-flex;
+        justify-content: center;
+        gap: 1px !important;
+        border-radius: 25px;
+        outline: none !important;
+        background-color: #050023;
+        color: #fff !important;
+        font-size: 16;
+        font-weight: 700;
+        padding: 2%;
+        line-height: 1;
+        transition: 500ms;
+        text-transform: capitalize;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    .tp-btn::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 50%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: #3772ff;
+        transition: 700ms cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        z-index: -1;
+    }
+    
+    .tp-btn span {
+        position: relative;
+        color: inherit;
+        z-index: 2;
+        color: #fff !important;
+        transition: 0s;
+    }
+    
+    .tp-btn:hover::before {
+        top: 100%;
+    }
+    
+    .tp-btn:hover span {
+        color: #fff;
+    }
+    
+    .tp-btn svg path {
+        fill: #fff;
+    }
+}
+
 
 .home1 {
     background: url(../img/home2-bg.jpg);
@@ -533,7 +608,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
 }
 
 .home-buttons {
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: center;
 }
 .tp-btn {
@@ -544,9 +619,9 @@ button.navbar-toggler:focus:not(:focus-visible) {
     outline: none !important;
     background-color: #050023;
     color: #fff !important;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
-    padding: 22px 51px;
+    padding: 10px 40px;
     line-height: 1;
     transition: 500ms;
     text-transform: capitalize;
@@ -572,6 +647,7 @@ button.navbar-toggler:focus:not(:focus-visible) {
 }
 
 .tp-btn span {
+    margin-top: 5%;
     position: relative;
     color: inherit;
     z-index: 2;
