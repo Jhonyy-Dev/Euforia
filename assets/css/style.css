@@ -554,6 +554,25 @@ button.navbar-toggler:focus:not(:focus-visible) {
     background-repeat: no-repeat;
     height: 800px;
 }
+
+/* Ajuste adicional para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 844px) {
+    .home1 {
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        max-height: 100vh; /* Usa el 100% de la altura visible de la pantalla */
+        background-position: center; /* Centra la imagen */
+        background-size: contain;
+        margin-bottom: -35%;
+    }
+    h1#subtitulo2 {
+        font-size: 21px!important;
+        color: #ffffff;
+        margin-top: 20%;
+        letter-spacing: 2px;
+    }
+}
 .home:after{
     content: "";
 	position: absolute;
